@@ -5,4 +5,20 @@
     <string name="nama">Rachel Nova Sari</string>
     <string name="alamat">Kasihan, Bantul</string>
     <string name="copy">Copyright, 2026</string>
+
+    <string name="nama_1">Rachel Nova Sari</string>
+    <string name="telp_1">085436874190</string>
+    <string name="alamat_1">Turi, Sleman</string>
+
+    <string name="nama_2">Bilkis akilatusakilla</string>
+    <string name="telp_2">085436874190</string>
+    <string name="alamat_2">Kasihan, Bantul</string>
+
+    <string name="nama_3">Azizah R Hamid</string>
+    <string name="telp_3">085436874190</string>
+    <string name="alamat_3">Depok, Sleman</string>
+
+    <string name="nama_4">Devita Dwi Indayani</string>
+    <string name="telp_4">085436874190</string>
+    <string name="alamat_4">Gamping, Sleman</string>
 </resources>
