@@ -61,7 +61,11 @@ fun ProfilCardItem(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-            // Isi Row ditambahkan nanti
+            Image(
+                painter = painterResource(id = R.drawable.logo_umy),
+                contentDescription = null,
+                modifier = Modifier.size(60.dp)
+            )
         }
     }
 }
