@@ -47,3 +47,21 @@ fun TugasLayoutUtama(modifier: Modifier = Modifier) {
         Spacer(modifier = Modifier.height(20.dp))
     }
 }
+
+@Composable
+fun ProfilCardItem(
+    namaRes: Int, telpRes: Int? = null, alamatRes: Int, bgColorRes: Int, alamatColorRes: Int, namaFontFamily: FontFamily
+) {
+    Card(
+        modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 8.dp),
+        colors = CardDefaults.cardColors(containerColor = colorResource(id = bgColorRes))
+    ) {
+        Row(
+            modifier = Modifier.fillMaxWidth().padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            // Isi Row ditambahkan nanti
+        }
+    }
+}
