@@ -5,4 +5,9 @@
     <color name="bg_card_zhilal">#001AE5</color>
     <color name="bg_card_ahmad">#006B18</color>
 
+    <!-- Warna Teks -->
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_cyan">#00FFFF</color>
+    <color name="text_yellow">#FFFF00</color>
+    <color name="text_black">#000000</color>
 </resources>
