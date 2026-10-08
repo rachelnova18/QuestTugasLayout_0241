@@ -32,6 +32,7 @@ fun TugasLayoutUtama(modifier: Modifier = Modifier) {
             .padding(top = 60.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+        // Judul Atas
         Text(
             text = stringResource(id = R.string.prodi),
             fontSize = 24.sp,
@@ -41,18 +42,23 @@ fun TugasLayoutUtama(modifier: Modifier = Modifier) {
         Text(
             text = stringResource(id = R.string.univ),
             fontSize = 16.sp,
-            fontWeight = FontWeight.Bold,
+            fontWeight = FontWeight.Bold, // Di gambar terlihat agak tebal
             color = colorResource(id = R.color.text_black)
         )
+
         Spacer(modifier = Modifier.height(20.dp))
+
+        // Card 1: Bambang (Font Cursive, Tanpa Telepon, Alamat Kuning)
         ProfilCardItem(
             namaRes = R.string.nama_1,
-            telpRes = null,
+            telpRes = null, // Null karena tidak ada nomor telepon di gambar
             alamatRes = R.string.alamat_1,
             bgColorRes = R.color.bg_card_bambang,
             alamatColorRes = R.color.text_yellow,
-            namaFontFamily = FontFamily.Cursive
+            namaFontFamily = FontFamily.Cursive // Menggunakan font latin
         )
+
+        // Card 2: Gibran (Font Default Bold, Ada Telepon, Alamat Kuning)
         ProfilCardItem(
             namaRes = R.string.nama_2,
             telpRes = R.string.telp_2,
@@ -61,6 +67,8 @@ fun TugasLayoutUtama(modifier: Modifier = Modifier) {
             alamatColorRes = R.color.text_yellow,
             namaFontFamily = FontFamily.Default
         )
+
+        // Card 3: Zhilal (Font Default Bold, Ada Telepon, Alamat Putih)
         ProfilCardItem(
             namaRes = R.string.nama_3,
             telpRes = R.string.telp_3,
@@ -69,6 +77,8 @@ fun TugasLayoutUtama(modifier: Modifier = Modifier) {
             alamatColorRes = R.color.text_white,
             namaFontFamily = FontFamily.Default
         )
+
+        // Card 4: Ahmad (Font Default Bold, Ada Telepon, Alamat Putih)
         ProfilCardItem(
             namaRes = R.string.nama_4,
             telpRes = R.string.telp_4,
@@ -77,6 +87,7 @@ fun TugasLayoutUtama(modifier: Modifier = Modifier) {
             alamatColorRes = R.color.text_white,
             namaFontFamily = FontFamily.Default
         )
+
         Spacer(modifier = Modifier.weight(1f))
 
         Text(
@@ -88,16 +99,28 @@ fun TugasLayoutUtama(modifier: Modifier = Modifier) {
     }
 }
 
+// Tambahkan parameter font dan buat telpRes boleh bernilai null (Int?)
 @Composable
 fun ProfilCardItem(
-    namaRes: Int, telpRes: Int? = null, alamatRes: Int, bgColorRes: Int, alamatColorRes: Int, namaFontFamily: FontFamily
+    namaRes: Int,
+    telpRes: Int? = null, // Bisa dikosongkan jika tidak ada nomor HP
+    alamatRes: Int,
+    bgColorRes: Int,
+    alamatColorRes: Int,
+    namaFontFamily: FontFamily // Parameter font dinamis
 ) {
     Card(
-        modifier = Modifier.fillMaxWidth().padding(horizontal = 24.dp, vertical = 8.dp),
-        colors = CardDefaults.cardColors(containerColor = colorResource(id = bgColorRes))
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 24.dp, vertical = 8.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = colorResource(id = bgColorRes)
+        )
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth().padding(12.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(12.dp),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
@@ -106,6 +129,7 @@ fun ProfilCardItem(
                 contentDescription = null,
                 modifier = Modifier.size(60.dp)
             )
+
             Column(
                 modifier = Modifier.weight(1f),
                 horizontalAlignment = Alignment.CenterHorizontally
@@ -113,29 +137,32 @@ fun ProfilCardItem(
                 Text(
                     text = stringResource(id = namaRes),
                     fontSize = 22.sp,
-                    fontFamily = namaFontFamily,
+                    fontFamily = namaFontFamily, // Font diatur sesuai panggilan
                     fontWeight = FontWeight.Bold,
                     color = colorResource(id = R.color.text_white)
                 )
 
+                // Cek apakah nomor telepon diisi (tidak null), jika ya baru tampilkan teksnya
                 if (telpRes != null) {
                     Text(
                         text = stringResource(id = telpRes),
                         fontSize = 14.sp,
                         color = colorResource(id = R.color.text_cyan)
                     )
-                    Text(
-                        text = stringResource(id = alamatRes),
-                        fontSize = 14.sp,
-                        color = colorResource(id = alamatColorRes)
-                    )
-                    Image(
-                        painter = painterResource(id = R.drawable.logo_umy),
-                        contentDescription = null,
-                        modifier = Modifier.size(60.dp)
-                    )
                 }
+
+                Text(
+                    text = stringResource(id = alamatRes),
+                    fontSize = 14.sp,
+                    color = colorResource(id = alamatColorRes)
+                )
             }
+
+            Image(
+                painter = painterResource(id = R.drawable.logo_umy),
+                contentDescription = null,
+                modifier = Modifier.size(60.dp)
+            )
         }
     }
 }
