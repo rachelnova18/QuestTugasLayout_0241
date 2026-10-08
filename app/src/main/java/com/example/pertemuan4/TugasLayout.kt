@@ -32,6 +32,17 @@ fun TugasLayoutUtama(modifier: Modifier = Modifier) {
             .padding(top = 60.dp),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        // Isi akan ditambahkan di commit selanjutnya
+        Text(
+            text = stringResource(id = R.string.prodi),
+            fontSize = 24.sp,
+            fontWeight = FontWeight.Bold,
+            color = colorResource(id = R.color.text_black)
+        )
+        Text(
+            text = stringResource(id = R.string.univ),
+            fontSize = 16.sp,
+            fontWeight = FontWeight.Bold,
+            color = colorResource(id = R.color.text_black)
+        )
     }
 }
