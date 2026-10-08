@@ -70,7 +70,13 @@ fun ProfilCardItem(
                 modifier = Modifier.weight(1f),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                // Teks ditambahkan nanti
+                Text(
+                    text = stringResource(id = namaRes),
+                    fontSize = 22.sp,
+                    fontFamily = namaFontFamily,
+                    fontWeight = FontWeight.Bold,
+                    color = colorResource(id = R.color.text_white)
+                )
             }
         }
     }
