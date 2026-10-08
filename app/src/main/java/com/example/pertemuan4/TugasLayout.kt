@@ -44,5 +44,6 @@ fun TugasLayoutUtama(modifier: Modifier = Modifier) {
             fontWeight = FontWeight.Bold,
             color = colorResource(id = R.color.text_black)
         )
+        Spacer(modifier = Modifier.height(20.dp))
     }
 }
