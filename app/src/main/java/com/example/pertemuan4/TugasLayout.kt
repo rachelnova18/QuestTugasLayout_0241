@@ -77,6 +77,14 @@ fun TugasLayoutUtama(modifier: Modifier = Modifier) {
             alamatColorRes = R.color.text_white,
             namaFontFamily = FontFamily.Default
         )
+        Spacer(modifier = Modifier.weight(1f))
+
+        Text(
+            text = stringResource(id = R.string.copy),
+            fontSize = 12.sp,
+            modifier = Modifier.padding(bottom = 20.dp),
+            color = colorResource(id = R.color.text_black)
+        )
     }
 }
 
