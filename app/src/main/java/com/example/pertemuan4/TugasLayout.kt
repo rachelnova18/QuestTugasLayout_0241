@@ -77,6 +77,14 @@ fun ProfilCardItem(
                     fontWeight = FontWeight.Bold,
                     color = colorResource(id = R.color.text_white)
                 )
+
+                if (telpRes != null) {
+                    Text(
+                        text = stringResource(id = telpRes),
+                        fontSize = 14.sp,
+                        color = colorResource(id = R.color.text_cyan)
+                    )
+                }
             }
         }
     }
