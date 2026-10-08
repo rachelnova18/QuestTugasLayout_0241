@@ -20,7 +20,8 @@ class MainActivity : ComponentActivity() {
         setContent {
             Pertemuan4Theme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ActivitasPertama(
+                    // Hapus ActivitasPertama dan ganti dengan TugasLayoutUtama
+                    TugasLayoutUtama(
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
