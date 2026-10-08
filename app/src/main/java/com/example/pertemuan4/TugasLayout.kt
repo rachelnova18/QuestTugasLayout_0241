@@ -61,6 +61,14 @@ fun TugasLayoutUtama(modifier: Modifier = Modifier) {
             alamatColorRes = R.color.text_yellow,
             namaFontFamily = FontFamily.Default
         )
+        ProfilCardItem(
+            namaRes = R.string.nama_3,
+            telpRes = R.string.telp_3,
+            alamatRes = R.string.alamat_3,
+            bgColorRes = R.color.bg_card_zhilal,
+            alamatColorRes = R.color.text_white,
+            namaFontFamily = FontFamily.Default
+        )
     }
 }
 
