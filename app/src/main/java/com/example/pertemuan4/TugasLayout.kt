@@ -66,6 +66,12 @@ fun ProfilCardItem(
                 contentDescription = null,
                 modifier = Modifier.size(60.dp)
             )
+            Column(
+                modifier = Modifier.weight(1f),
+                horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+                // Teks ditambahkan nanti
+            }
         }
     }
 }
