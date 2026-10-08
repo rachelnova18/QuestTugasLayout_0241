@@ -84,6 +84,11 @@ fun ProfilCardItem(
                         fontSize = 14.sp,
                         color = colorResource(id = R.color.text_cyan)
                     )
+                    Text(
+                        text = stringResource(id = alamatRes),
+                        fontSize = 14.sp,
+                        color = colorResource(id = alamatColorRes)
+                    )
                 }
             }
         }
