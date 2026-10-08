@@ -45,6 +45,14 @@ fun TugasLayoutUtama(modifier: Modifier = Modifier) {
             color = colorResource(id = R.color.text_black)
         )
         Spacer(modifier = Modifier.height(20.dp))
+        ProfilCardItem(
+            namaRes = R.string.nama_1,
+            telpRes = null,
+            alamatRes = R.string.alamat_1,
+            bgColorRes = R.color.bg_card_bambang,
+            alamatColorRes = R.color.text_yellow,
+            namaFontFamily = FontFamily.Cursive
+        )
     }
 }
 
